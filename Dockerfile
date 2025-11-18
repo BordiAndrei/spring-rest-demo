@@ -8,4 +8,4 @@ RUN ./mvnw clean package
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/spring-rest-demo-0.0.1-SNAPSHOT.jar"]
+CMD java -jar $(find target -name "*.jar" | head -n 1)
